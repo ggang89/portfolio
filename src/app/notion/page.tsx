@@ -7,7 +7,6 @@ export default async function page() {
   
   const recordMap = await notion.getPage(process.env.NOTION_PAGE_ID as string, );
 
-  return 
-  <Notion recordMap={recordMap}  />;
+  return <Notion recordMap={recordMap}  />;
   
 }
