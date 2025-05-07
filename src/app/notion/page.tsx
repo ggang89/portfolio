@@ -3,10 +3,13 @@ import Notion from "../components/notion";
 
 
 
-const notion = new NotionAPI();
+const notion = new NotionAPI({
+  authToken: process.env.NOTION_API_KEY,
+
+});
 
 export default async function Page() {
-  const pageId = process.env.NOTION_PAGE_ID as string;
+  const pageId = process.env.NOTION_PAGE_ID;
 
   if (!pageId) {
     return <div>Notion page ID 가 없습니다.</div>;
@@ -22,3 +25,5 @@ export default async function Page() {
     return <div>Notion 페이지를 가져오는 중 오류가 발생했습니다.</div>;
   }
 }
+
+
