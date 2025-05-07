@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "katex": "^0.16.22",
     "next": "15.3.1",
     "notion-client": "^7.3.0",
     "notion-types": "^7.3.0",
+    "prismjs": "^1.30.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-notion-x": "^7.3.0"
