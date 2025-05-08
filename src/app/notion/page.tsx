@@ -1,29 +1,16 @@
-import { NotionAPI } from "notion-client";
 import Notion from "../components/notion";
+import "react-notion-x/src/styles.css";
+import { NotionAPI } from "notion-client";
 
+const notion = new NotionAPI();
 
-
-const notion = new NotionAPI({
-  authToken: process.env.NOTION_API_KEY,
-
-});
-
-export default async function Page() {
-  const pageId = process.env.NOTION_PAGE_ID;
-
-  if (!pageId) {
-    return <div>Notion page ID 가 없습니다.</div>;
-  }
-
-  try {
-    const recordMap = await notion.getPage(pageId);
-    console.log(recordMap);
-    return <Notion recordMap={recordMap} />;
-
-  } catch (error) {
-    console.error("Error fetching Notion page:", error);
-    return <div>Notion 페이지를 가져오는 중 오류가 발생했습니다.</div>;
-  }
+export default async function getData() {
+  const recordMap= await notion.getPage(
+    "Front-end-developer-1e75be88695680a6844cff9572157c32"
+  );
+  console.log("recordMap",recordMap);
+   return <Notion recordMap={recordMap}/>;
+ 
 }
 
 

@@ -2,14 +2,7 @@
 
 import { NotionRenderer } from "react-notion-x";
 import { ExtendedRecordMap } from "notion-types";
-
 import dynamic from "next/dynamic";
-
-import "react-notion-x/src/styles.css";
-import "prismjs/themes/prism-tomorrow.css"; // 코드 하이라이팅
-import "katex/dist/katex.min.css"; // 수식
-
-
 
 interface Props {
   recordMap: ExtendedRecordMap;
@@ -40,10 +33,6 @@ const Modal = dynamic(
   }
 );
 
-  console.log("recordMap", recordMap);
-  if (!recordMap) {
-    return <div>recordMap 데이터가 없습니다.</div>;
-  }
   return (
     <NotionRenderer
       recordMap={recordMap}
