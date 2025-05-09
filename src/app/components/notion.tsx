@@ -2,7 +2,11 @@
 
 import { NotionRenderer } from "react-notion-x";
 import { ExtendedRecordMap } from "notion-types";
+import "react-notion-x/src/styles.css";
+
 import dynamic from "next/dynamic";
+import Link from "next/link";
+import Image from "next/image";
 
 interface Props {
   recordMap: ExtendedRecordMap;
@@ -43,6 +47,8 @@ const Modal = dynamic(
         Equation,
         Modal,
         Pdf,
+        nextImage: Image,
+        nextLink: Link,
       }}
     />
   );
