@@ -29,7 +29,7 @@ export default function Home() {
           </div>
           <div className="flex gap-2 my-3">
             <RiKakaoTalkFill size={25} />
-            <p>psyoung0419</p>
+            <p>psyoung0410</p>
           </div>
 
           <div className="flex my-7 items-center gap-10">
