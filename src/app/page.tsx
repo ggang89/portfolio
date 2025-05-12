@@ -11,11 +11,10 @@ import { RiKakaoTalkFill } from "react-icons/ri";
 import { SiTistory } from "react-icons/si";
 export default function Home() {
   return (
-    <div className="m-0 flex justify-center items-center h-screen bg-amber-100">
-      <section className="w-[700px] h-[500px] flex gap-10  items-center bg-amber-200">
+    <div className="m-0 flex justify-center items-center h-screen bg-amber-100 ">
+      <section className="w-[700px] h-[450px] flex gap-10  items-center bg-amber-200 drop-shadow-xl">
         <div className="px-8">
-          <PiEggCrackLight size={200} />
-          {/* <LuTwitter size={100} className="absolute  left-72 top-62 z-100" /> */}
+          <PiEggCrackLight size={200} className="animate-wiggle" />
         </div>
         <div>
           <h2 className="text-3xl font-bold flex gap-2">
